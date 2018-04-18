@@ -9,10 +9,14 @@
   <title>Movie Maker</title>
 </head>
 <body>
-  <div>
-    <h1>Movie Maker</h1>
-    <input placeholder="Enter Budget Here">
-    <button>Submit</button>
+  <div class="header">
+    <div class="col-md-3">
+      <h1>Movie Maker</h1>
+    </div>
+    <div class="col-md-3 col-md-offset-6">
+      <input id="budget-input" placeholder="Enter Budget Here">
+      <button id="submit-btn">Submit</button>
+    </div>
   </div>
 
   <div id="progress-bar">
@@ -20,11 +24,13 @@
   </div>
 
   <div id="main-content">
-    <section class="col-md-6">
+    <section class="col-md-6" id="checkboxes">
 
     </section>
-    <section class="col-md-6">
+    <section class="cost-container col-md-6">
+      <div id="costs">
 
+      </div>
     </section>
   </div>
 
