@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "id": "01",
+      "categoryName": "Actors and Actresses"
+    },
+    {
+      "id": "02",
+      "categoryName": "Animals + Trainers"
+    },
+    {
+      "id": "03",
+      "categoryName": "Special Effects"
+    },
+    {
+      "id": "04",
+      "categoryName": "Locations"
+    }
+  ]
+ }
