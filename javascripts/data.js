@@ -1,5 +1,5 @@
-const categories = [];
-const movieElements = [];
+let categories = [];
+let movieElements = [];
 
 const getCategories = () => {
   return categories;
