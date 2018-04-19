@@ -3,6 +3,7 @@ const loadMovieElem = require('./movieElements');
 const printDomString = require('./categoriesDom');
 // const printElementsDom = require('./movieElementsDom');
 const data = require('./data');
+const getBudget = require('./budgetInput');
 
 let categories = [];
 
@@ -28,6 +29,7 @@ const errorFunction = function () {
 const initializer = () => {
   loadCategories(whenCategoriesLoad, errorFunction);
   loadMovieElem(whenMovieElemLoad, errorFunction);
+  getBudget();
 };
 
 module.exports = {
