@@ -6,8 +6,25 @@
   display: inline;
 }
 
-.cost-container {
+#left-column {
+  border: 2px solid black;
+}
+
+#right-column{
   height: 800px;
   width: 25%;
   border: 2px solid black;
+}
+
+/* Options Styling */
+
+.option-item {
+  margin-top: 25px;
+  text-decoration: underline;
+}
+
+.option-name {
+  display: inline;
+  margin-left: 5px;
+  font-size: 15px;
 }
