@@ -1,5 +1,5 @@
 {
-  "movie-elements": [
+  "movieElements": [
     {
       "id": 1,
       "categoryId": "01",
@@ -89,6 +89,6 @@
       "categoryId": "02",
       "name": "Bald Eagle",
       "cost": 2000
-    },
+    }
   ]
 }
