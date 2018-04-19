@@ -16,6 +16,13 @@
   border: 2px solid black;
 }
 
+/* Progress Bar */
+
+.progress {
+  margin: 50px auto;
+  width: 60%;
+}
+
 /* Options Styling */
 
 .option-item {
