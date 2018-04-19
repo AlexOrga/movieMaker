@@ -3,8 +3,16 @@ const categoriesOutputDiv = document.getElementById('checkboxes');
 
 const printDomString = (movieElem, categories) => {
   let domString = '';
-  domString += `<h3>${categories[0].categoryName}</h3>`;
-  domString +=  `<p>${movieElem[0].name}</p>`;
+  domString +=  `<div>`;
+  categories.forEach((category) => {
+    domString +=  `<h3>${category.categoryName}</h3>`;
+    movieElem.forEach((movieElement) => {
+      if (movieElement.categoryId === category.id) {
+        domString += `<p>${movieElement.name}</p>`;
+      }
+    });
+  });
+  domString +=  `</div>`;
   return domString;
 };
 
