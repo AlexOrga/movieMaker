@@ -11,7 +11,7 @@ const printDomString = (movieElem, categories) => {
     movieElem.forEach((movieElement) => {
       if (movieElement.categoryId === category.id) {
         domString += `<div class="option-item col-xs-3">`;
-        domString += `<input type="checkbox" name="checkbox">`;
+        domString += `<input type="checkbox" name="checkbox" class="checkItBrah" data-element-id="${movieElement.id}">`;
         domString += `<p class="option-name">${movieElement.name}</p>`;
         domString += `</div>`;
       }
