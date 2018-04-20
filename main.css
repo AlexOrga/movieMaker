@@ -32,6 +32,12 @@
   width: 60%;
 }
 
+/* Costs */
+
+#display-budget {
+  color: rgb(47, 224, 47);
+}
+
 /* Options Styling */
 
 .option-item {
