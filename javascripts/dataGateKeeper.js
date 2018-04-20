@@ -4,6 +4,7 @@ const printDomString = require('./categoriesDom');
 // const printElementsDom = require('./movieElementsDom');
 const data = require('./data');
 const getBudget = require('./budgetInput');
+const buildProgressBar = require('./progressBar');
 
 let categories = [];
 
@@ -30,6 +31,7 @@ const initializer = () => {
   loadCategories(whenCategoriesLoad, errorFunction);
   loadMovieElem(whenMovieElemLoad, errorFunction);
   getBudget();
+  buildProgressBar(0, 100, 0);
 };
 
 module.exports = {
