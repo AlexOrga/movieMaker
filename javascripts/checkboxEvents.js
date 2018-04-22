@@ -18,11 +18,13 @@ const checkEvent = () => {
 };
 
 const compareMovieArray = (e) => {
+  console.log('e:', e);
   const checkboxId = e.target.id * 1;
   const movieElemArray = data.getMovieElem();
   movieElemArray.forEach((element) => {
     if (element.id === checkboxId) {
       elements.push(element);
+      data.setCurrentCost(element.cost);
     }
   });
   makeReceipt(elements);

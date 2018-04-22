@@ -19,7 +19,6 @@ const getBudget = () => {
 };
 
 const newBudget = (updatedBudget) => {
-  console.log(updatedBudget);
   return updatedBudget;
 };
 

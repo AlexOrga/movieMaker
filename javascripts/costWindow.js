@@ -1,3 +1,5 @@
+const data = require('./data');
+
 const makeReceipt = (elements) => {
   let domString = '';
   elements.forEach((element) => {
@@ -5,11 +7,12 @@ const makeReceipt = (elements) => {
     domString +=    `<p>${element.name}: $${element.cost}</p>`;
     domString +=  `</div>`;
   });
-  printToCost('costs', domString);
+  printReceipt('costs', domString);
 };
 
-const printToCost = (divId, string) => {
+const printReceipt = (divId, string) => {
   document.getElementById(divId).innerHTML = string;
+  data.costTotal();
 };
 
 module.exports = makeReceipt;

@@ -2,7 +2,7 @@ const loadCategories = require('./categories');
 const loadMovieElem = require('./movieElements');
 const printDomString = require('./categoriesDom');
 const data = require('./data');
-const getBudget = require('./budgetInput');
+const budgetInput = require('./budgetInput');
 const buildProgressBar = require('./progressBar');
 
 let categories = [];
@@ -29,7 +29,7 @@ const errorFunction = function () {
 const initializer = () => {
   loadCategories(whenCategoriesLoad, errorFunction);
   loadMovieElem(whenMovieElemLoad, errorFunction);
-  getBudget();
+  budgetInput.getBudget();
   buildProgressBar(0, 100, 0);
 };
 
