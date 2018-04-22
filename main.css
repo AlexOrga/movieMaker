@@ -42,11 +42,9 @@
 
 .option-item {
   margin-top: 25px;
-  text-decoration: underline;
 }
 
 .option-name {
-  display: inline;
   margin-left: 5px;
-  font-size: 15px;
+  text-decoration: underline;
 }

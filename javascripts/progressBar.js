@@ -13,4 +13,8 @@ const buildProgressBar = (currentSpent, budgetMax, percent) => {
   printToDom('progress-bar', domString);
 };
 
+// const progressBarUpdate = (elements) => {
+
+// };
+
 module.exports = buildProgressBar;

@@ -1,5 +1,4 @@
-const budgetButton = document.getElementById('budget-btn');
-const buildProgressBar = require('./progressBar');
+// const buildProgressBar = require('./progressBar');
 
 const printBudget = (budgetInput) => {
   const getBudgetDisplay = document.getElementById('display-budget');
@@ -10,12 +9,21 @@ const printBudget = (budgetInput) => {
 
 const getBudget = () => {
   let budget = 0;
+  const budgetButton = document.getElementById('budget-btn');
   budgetButton.addEventListener('click', () => {
     const budgetInput = document.getElementById('budget-input').value;
     budget = budgetInput;
-    buildProgressBar(2000, budget);
-    printBudget(budgetInput);
+    printBudget(budget);
+    newBudget(budget);
   });
 };
 
-module.exports = getBudget;
+const newBudget = (updatedBudget) => {
+  console.log(updatedBudget);
+  return updatedBudget;
+};
+
+module.exports = {
+  getBudget,
+  newBudget,
+};
