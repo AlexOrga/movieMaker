@@ -1,10 +1,9 @@
 const loadCategories = require('./categories');
 const loadMovieElem = require('./movieElements');
 const printDomString = require('./categoriesDom');
-// const printElementsDom = require('./movieElementsDom');
 const data = require('./data');
 const getBudget = require('./budgetInput');
-const buildProgressBar = require('./progressBar');
+const getShit = require('./progressBar');
 
 let categories = [];
 
@@ -31,7 +30,7 @@ const initializer = () => {
   loadCategories(whenCategoriesLoad, errorFunction);
   loadMovieElem(whenMovieElemLoad, errorFunction);
   getBudget();
-  buildProgressBar(0, 100, 0);
+  getShit();
 };
 
 module.exports = {

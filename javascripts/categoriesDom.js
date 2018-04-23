@@ -1,5 +1,5 @@
+const checkEvent = require('./checkboxEvents');
 const categoriesOutputDiv = document.getElementById('left-column');
-// const data = require('./data');
 
 const printDomString = (movieElem, categories) => {
   let domString = '';
@@ -11,8 +11,8 @@ const printDomString = (movieElem, categories) => {
     movieElem.forEach((movieElement) => {
       if (movieElement.categoryId === category.id) {
         domString += `<div class="option-item col-xs-3">`;
-        domString += `<input type="checkbox" name="checkbox">`;
-        domString += `<p class="option-name">${movieElement.name}</p>`;
+        domString +=  `<input type="checkbox" name="checkbox" class="checkIt" id="${movieElement.id}">`;
+        domString +=  `<label class="option-name">${movieElement.name}</label>`;
         domString += `</div>`;
       }
     });
@@ -25,6 +25,7 @@ const printDomString = (movieElem, categories) => {
 
 const printCategoriesToDom = (movieElem, categories) => {
   categoriesOutputDiv.innerHTML = printDomString(movieElem, categories);
+  checkEvent();
 };
 
 module.exports = printCategoriesToDom;
