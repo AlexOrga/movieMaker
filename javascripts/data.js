@@ -1,6 +1,7 @@
 let categories = [];
 let movieElements = [];
-const currentCost = [];
+let budget = 0;
+let currentCost = [];
 
 const getCategories = () => {
   return categories;
@@ -18,8 +19,22 @@ const setMovieElem = (movieElemArray) => {
   movieElements = movieElemArray;
 };
 
+const setNewBudget = (newBudget) => {
+  budget = newBudget;
+};
+
+const getNewBudget = () => {
+  return budget;
+};
+
 const setCurrentCost = (newCost) => {
+  console.log('New cost to add', newCost);
   currentCost.push(newCost);
+};
+
+const removeCurrentCost = (idToRemove) => {
+  console.log('ID to remove', idToRemove);
+  currentCost = currentCost.filter(c => c.id !== idToRemove);
 };
 
 const getCurrentCost = () => {
@@ -27,10 +42,8 @@ const getCurrentCost = () => {
 };
 
 const costTotal = () => {
-  console.log('currentCost: ', currentCost);
   return currentCost.reduce((totalCost, currentCost) => {
-    console.log('totalCost: ', totalCost, 'currentCost: ', currentCost);
-    return totalCost + currentCost;
+    return totalCost + currentCost.cost;
   }, 0);
 };
 
@@ -39,7 +52,10 @@ module.exports = {
   setCategories,
   getMovieElem,
   setMovieElem,
+  setNewBudget,
+  getNewBudget,
   setCurrentCost,
+  removeCurrentCost,
   getCurrentCost,
   costTotal,
 };

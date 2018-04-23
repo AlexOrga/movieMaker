@@ -1,4 +1,15 @@
-// const getBudget = require('./budgetInput');
+const data = require('./data');
+
+const getShit = () => {
+  const budget = data.getNewBudget();
+  console.log('budget: ', budget);
+  const currentCost = data.costTotal();
+  const costArray = data.getCurrentCost();
+  console.log('costArray', costArray);
+  console.log('currentCost: ', currentCost);
+  const percent = (currentCost * 100) / budget;
+  buildProgressBar(currentCost, budget, percent);
+};
 
 const printToDom = (divId, string) => {
   document.getElementById(divId).innerHTML = string;
@@ -17,4 +28,4 @@ const buildProgressBar = (currentSpent, budgetMax, percent) => {
 
 // };
 
-module.exports = buildProgressBar;
+module.exports = getShit;
