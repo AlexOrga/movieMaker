@@ -1,4 +1,5 @@
 const data = require('./data');
+const canMakeOrNot = require('./canMakeMovie');
 
 const makeReceipt = (elements) => {
   let domString = '';
@@ -7,6 +8,7 @@ const makeReceipt = (elements) => {
     domString +=    `<p>${element.name}: $${element.cost}</p>`;
     domString +=  `</div>`;
   });
+  canMakeOrNot();
   printReceipt('costs', domString);
 };
 

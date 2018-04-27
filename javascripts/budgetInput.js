@@ -1,5 +1,5 @@
 const data = require('./data');
-const getShit = require('./progressBar');
+const getValuesProgBar = require('./progressBar');
 
 const printBudget = (budgetInput) => {
   const getBudgetDisplay = document.getElementById('display-budget');
@@ -16,7 +16,7 @@ const getBudget = () => {
     budget = budgetInput;
     printBudget(budget);
     data.setNewBudget(budget);
-    getShit();
+    getValuesProgBar();
   });
 };
 
