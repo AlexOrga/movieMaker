@@ -1,6 +1,6 @@
 const data = require('./data');
 
-const getShit = () => {
+const getValuesProgBar = () => {
   const budget = data.getNewBudget();
   console.log('budget: ', budget);
   const currentCost = data.costTotal();
@@ -28,4 +28,4 @@ const buildProgressBar = (currentSpent, budgetMax, percent) => {
 
 // };
 
-module.exports = getShit;
+module.exports = getValuesProgBar;

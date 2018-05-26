@@ -2,6 +2,7 @@ let categories = [];
 let movieElements = [];
 let budget = 0;
 let currentCost = [];
+let totalCostValue = 0;
 
 const getCategories = () => {
   return categories;
@@ -42,9 +43,14 @@ const getCurrentCost = () => {
 };
 
 const costTotal = () => {
-  return currentCost.reduce((totalCost, currentCost) => {
+  totalCostValue = currentCost.reduce((totalCost, currentCost) => {
     return totalCost + currentCost.cost;
   }, 0);
+  return totalCostValue;
+};
+
+const getTotalCostValue = () => {
+  return totalCostValue;
 };
 
 module.exports = {
@@ -58,4 +64,5 @@ module.exports = {
   removeCurrentCost,
   getCurrentCost,
   costTotal,
+  getTotalCostValue,
 };
