@@ -4,7 +4,9 @@
 
 An application that helps the user decide whether or not they have the money to make a movie given choices of actors, locations, and animals to use in the movie.  The user inputs their budget and then checks the options boxes.  The Movie Maker will take the cost of each option and create a total cost and then compare that against the user's budget.  A progress bar at the top displays a visual representation of how much money the user has left and how much they have used already.
 
-# Screen Shots
+# Screen Shot
+
+![Webpage](https://raw.githubusercontent.com/AlexOrga/movieMaker/master/screenshots/movieMaker1.png)
 
 # How To Run
 
